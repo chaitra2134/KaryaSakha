@@ -20,7 +20,7 @@ require 'phpmailer/src/SMTP.php';
 if(isset($_POST['submit']))
 {
 
-    include 'signup.php'; //Control will go to insertdata.php file, check it out
+    include '\main\signup\signup.php'; //Control will go to signup.php file, check it out
     $mail = new PHPMailer(true); //This line creates a new instance 
     //of the PHPMailer class and assigns it to the variable $mail
 
