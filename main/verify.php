@@ -38,7 +38,7 @@
       $sql = "SELECT * FROM user WHERE userName = '$uname' AND pass = '$pass' ";
       $result = $conn->query($sql);
       if(!$result)
-        die("No data found!");
+        die("Invalid Username Or Password!");
       else
       {
         echo "You Are A Valid User.";
