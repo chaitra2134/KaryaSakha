@@ -1,38 +1,42 @@
 <!--
-    Author: Chinmayee
-      Date: 21/07/2023
-      Time: 16:54
+    Author: 
+      Date: 26/07/2023
+
+    Edited By: Chinmayee
+    Date: 26/07/23
       Log In Page
 -->
 
-<html>
-    <head>
-        <title> Log In </title>
-    </head>
-    <body>
-        <form action="verify.php" method="POST">
-            <div class="imgcontainer">
-              <img src="img_avatar2.png" alt="Avatar" class="avatar">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Log In </title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="picture">
+        <img src="C:\Users\SAI\Desktop\project IV">
+    </div>
+    <div class="header">
+        <div class="loginform">
+            <div class="logo">
+                <div class="uil uil-user logo_icon"></div>
             </div>
-          
-            <div class="container">
-              <label for="uname"><b>Username</b></label>
-              <input type="text" placeholder="Enter Username" name="uname" required>
-          
-              <label for="pass"><b>Password</b></label>
-              <input type="password" placeholder="Enter Password" name="pass" required>
-          
-
-              <input type="submit" value="Login" name="submit">
-              <label>
+            <form action="verify.php" method="POST">
+                <p class="heading">Welcome Back!</p>
+                <p class ="mailpass"> Email</p>
+                <input type="text" placeholder="abcd@gmail.com" name="uname" required autofocus="on">
+                <p class ="mailpass">  Password</p>
+                <input type="password" placeholder="XXXXXXXX" name="pass" required autofocus="on">
+                <br>
+                <input type="submit" value="Login" name="submit">
+                <br>
+                <label>
                 <input type="checkbox" checked="checked" name="remember"> Remember me
-              </label>
-            </div>
-          
-            <div class="container" style="background-color:#f1f1f1">
-              <button type="button" class="cancelbtn">Cancel</button>
-              <span class="psw">Forgot <a href="#">password?</a></span>
-            </div>
-          </form> 
-    </body>
+                </label>
+                <p class="footer">Don't have an account?  <a href="#"> Let's create one </a></p>
+            </form>    
+        </div>
+    </div>
+</body>
 </html>
