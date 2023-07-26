@@ -49,7 +49,7 @@ if(isset($_POST['submit']))
     
     else 
     {
-        header("Location: login.html");
+        header("Location: \main\login\login.html");
         exit();
     }
 }
