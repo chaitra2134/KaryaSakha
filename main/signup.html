@@ -1,0 +1,149 @@
+<!-- 
+    Written by : Prizam Sarkhi 
+    19 July @ 20:06
+    Demo form to test backend activity 
+
+    Edited By: Chinmayee
+    Date: 21/07/23 @ 14:52
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Signup Demo</title>
+    <style>
+        table
+        {
+            margin-left:auto;
+            margin-right:auto;
+        }
+    </style>
+</head>
+
+
+
+<body>
+        
+        <form action="createfile.php" method="post">
+            <table width="50%" cellspacing="15">
+                <tr colspan="3">
+                    <td>
+
+                    </td>
+                    <td>
+                        <h1>Sign Up</h1>
+                    </td>
+                    <td>
+
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+
+                        First Name :
+                    </th>
+                    <td>
+                        <input type="text" name="firstName" value="" required>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Last Name :
+                    </th>
+                    <td>
+                        <input type="text" name="lastName" value="" required>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        User Name :
+                    </th>
+                    <td>
+                        <input type="text" name="userName" value="" required>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Email :
+                    </th>
+                    <td>
+                        <input type="email" name="email" value="" required>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Password :
+                    </th>
+                    <td>
+                        <input type="password" name="pass" value="" required>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Date of Birth :
+                    </th>
+                    <td>
+                        <input type="date" name="dob" value="" required>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Gender :
+                    </th>
+                    <td>
+                        <input type="radio" name="gender" value="Male" checked>
+                        Male
+                        <input type="radio" name="gender" value="Female">
+                        Female
+                        <input type="radio" name="gender" value="Transgender">
+                        Transgender
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                    
+                    <input type="radio" name="gender" value="Non-binary/Non-conforming"> 
+                    Non-Binary/Non-Conforming
+                    <input type="radio" name="gender" value="Prefer-not-to-respond">
+                    Prefer Not To Respond
+
+
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Profession :
+                    </th>
+                    <td>
+                        <input type="text" name="profession" value="" required>
+                    </td>
+                </tr>
+                <tr colspan="3">
+                    <td>
+
+                    </td>
+                    <td>
+                        <input type="submit" name="submit" value="Sign up" class="btn-1">
+            
+                    </td>
+                    <td>
+
+                    </td>
+                </tr>
+            </table>
+
+
+
+    </form>
+
+</body>
+
+</html>
