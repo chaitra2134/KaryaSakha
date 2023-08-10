@@ -23,7 +23,7 @@
               title VARCHAR(20),
               content VARCHAR(500),
               isHidden BOOLEAN DEFAULT 0,
-              isFavourite BOOLEAN,
+              isFavourite BOOLEAN DEFAULT 0,
               dateCreated TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP 
           )";
     
