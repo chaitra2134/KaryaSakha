@@ -1,7 +1,7 @@
 <?php
 
   /* 
-      Author: Chinmayee
+      Author: Chinmayee Sapkale
       Date: 19/07/2023
       Time: 16:07
       Creating User Table And Establishing Database Connection
