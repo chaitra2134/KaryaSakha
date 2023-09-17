@@ -7,5 +7,6 @@ Completed Features -
 - To-do list
 - Timer (Pomodoro,alarm,stopwatch)
 - Calendar
+- GoalSync
 
 
