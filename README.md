@@ -6,5 +6,6 @@ Completed Features -
 - Notes
 - To-do list
 - Timer (Pomodoro,alarm,stopwatch)
+- Calendar
 
 
