@@ -10,4 +10,6 @@ Completed Features -
 - Calendar
 - GoalSync
 
+Currently Working on Integration of all the  features with Nav Bar
+
 
