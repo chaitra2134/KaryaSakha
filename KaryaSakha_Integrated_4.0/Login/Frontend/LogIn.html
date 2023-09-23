@@ -1,0 +1,78 @@
+<!--
+  Author - Ritu and Om
+  date and time unknown
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="StyleLogIn.css">
+
+</head>
+
+<body>
+  <div class="split-container">
+    <div class="split-left">
+
+
+      <img
+        src="https://img.freepik.com/free-vector/add-tasks-concept-illustration_114360-4905.jpg?w=740&t=st=1690400679~exp=1690401279~hmac=e3e2e3ac68175c6e7f5cbdcec25a5d40596d9ae32ccd975c425189c11faee17b"
+        alt="Left Image">
+
+    </div>
+    <div class="split-right">
+      <div class="centered">
+
+        <!-- <header>Signup</header> -->
+        <p class="head-text">Welcome Back!</p>
+        <form action="../Backend/VerifyLogin.php" method="post">
+
+          <div class="field email-field">
+            <div class="input-field">
+              <label for="email">Username/Email :</label>
+              <input type="text" required placeholder="Enter your username or email" name="userNameorEmail" class="username"
+                id="username" />
+            </div>
+            <span class="error email-error">
+              <i class="bx bx-error-circle error-icon"></i>
+              <p class="error-text">Please enter a valid username</p>
+            </span>
+          </div>
+
+          <div class="field create-password">
+            <div class="input-field">
+              <label for="password">Password:</label>
+              <input type="password" required placeholder="Create password" name="pass" class="password"
+                id="password" />
+              <i class="bx bx-hide show-hide"></i>
+            </div>
+            <span class="error password-error">
+              <i class="bx bx-error-circle error-icon"></i>
+              <p class="error-text">
+                Please enter at least 8 characters with numbers, symbols, lowercase and
+                uppercase letters.
+              </p>
+            </span>
+          </div>
+          <a href="../../ForgotPassword/ForgotPassword.html">Forgot Password?</a>
+          <div class="button">
+            <input type="submit" name="submit_LogIn" value="Log in">
+          </div>
+          <footer>Don't have an account ? <span class="psw"><a href="../../Signup/Frontend/SignUp.html">Sign up</a></span></footer>
+        </form>
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+</body>
+
+</html>
