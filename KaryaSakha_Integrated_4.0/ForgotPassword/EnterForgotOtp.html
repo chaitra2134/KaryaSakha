@@ -1,0 +1,46 @@
+<!-- 
+    Concept by - Pranav
+    Written by - Prizam
+    @31/07/2023 @ 19:25 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Verification</title>
+    <link rel="stylesheet" href="../../Frontend/ForgotPassword/StyleForgotOtp.css">
+</head>
+<body>
+    <div class="split-container">
+        <div class="split-left">
+            <img src="https://img.freepik.com/free-vector/add-tasks-concept-illustration_114360-4905.jpg?w=740&t=st=1690400679~exp=1690401279~hmac=e3e2e3ac68175c6e7f5cbdcec25a5d40596d9ae32ccd975c425189c11faee17b" alt="Left Image">
+        </div>
+        <div class="split-right">
+            <div class="centered">
+                <div class="container">
+                    <form action="../../Backend/ForgotPassword_PHP/VerifyForgotOtp.php" id="otp-form" method="post">
+                        <header>OTP Verification</header>
+                        <h4>Enter the OTP to reset your Password</h4>
+                        <div class="input-field">
+                            <!-- Add a tabindex attribute to allow focus on the input fields -->
+                            <input type="text" class="otp-input" name="otp1" maxlength="1" tabindex="1">
+                            <input type="text" class="otp-input" name="otp2" maxlength="1" tabindex="2">
+                            <input type="text" class="otp-input" name="otp3" maxlength="1" tabindex="3">
+                            <input type="text" class="otp-input" name="otp4" maxlength="1" tabindex="4">
+                            <input type="text" class="otp-input" name="otp5" maxlength="1" tabindex="5">
+                            <input type="text" class="otp-input" name="otp6" maxlength="1" tabindex="6">
+                        </div>
+                        <div class="button">
+                            <input type="submit" name="submit_ForgotOtp" value="Verify" id="verify-btn">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../Frontend/ForgotPassword/StyleForgotOtp.js"></script>
+</body>
+</html>
