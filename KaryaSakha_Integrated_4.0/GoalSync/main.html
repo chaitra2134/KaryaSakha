@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <title>Goals Page</title>
+    <style>
+        /* styles.css */
+        /* styles.css */
+        body {
+            background-color: white;
+
+        }
+        .main-container{
+            margin-top: 100px;
+            margin-left: 250px;
+        }
+        @keyframes slideBottom {
+            from {
+                transform: translateY(100%);
+            }
+
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        .slide-bottom {
+            animation: slideBottom 1.5s ease-in-out;
+            animation-direction: normal;
+        }
+
+        /* Define a fade-in animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Apply the animation to elements */
+        .fade-in {
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .add-goal-container {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .add-goal-button {
+            font-size: 18px;
+            padding: 8px;
+            background-color: #744caf;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .add-goal-button:hover {
+            background-color: rgb(8, 105, 8);
+        }
+
+        .container {
+            padding-left: 5px;
+          
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start; 
+            /* justify-content: space-between; */
+      /* gap: 20px;  */
+        }
+
+        .goal-card {
+            border: 3px solid #929292;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px;
+            width: 47%;
+            box-sizing: border-box;
+            background-color: white;
+            /* background-color: #f7f7f7;  */
+            transition: background-color 0.3s;
+            box-shadow: 0 0 5px rgb(169, 169, 169);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            position: relative;
+            /* Add position for positioning the dropdown button */
+        }
+
+        .goal-card:hover {
+            background-color: #f9f9f9;
+        }
+
+        .title-container {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            /* Align title vertically */
+        }
+
+        .title-container:hover {
+            background-color: #e0e0e0;
+        }
+
+        .goal-card .title-input {
+            color: #744caf;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            width: 100%;
+            font-size: 27px;
+            letter-spacing: 1px;
+            /* Increase font size for title */
+            font-weight: bold;
+            /* Add font weight to emphasize the title */
+        }
+
+
+        .dropdown-button {
+            /* padding-top: 10px; */
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 15px;
+            align-items: right;
+        }
+
+        .task-container {
+            align-items: left;
+            justify-content: left;
+
+
+            display: none;
+            margin-top: 10px;
+
+        }
+
+        .taskList {
+            align-items: left;
+            justify-content: left;
+            list-style: none;
+            padding: 0px;
+
+        }
+
+        .task-list-item-div {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: left;
+            padding: 1px;
+            /* background-color: #f9f9f9; */
+            border-radius: 5px;
+            overflow-wrap: break-word;
+
+        }
+
+        .taskListItem {
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+            align-items: left;
+            padding: 1px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            overflow-wrap: break-word;
+        }
+
+        .taskListItem.actions {
+            display: flex;
+            gap: 3px;
+        }
+
+        .taskListItem:hover {
+            background-color: #e0e0e0;
+        }
+
+        .checkbox {
+            margin-right: 10px;
+            cursor: pointer;
+
+        }
+
+        .delete-btn {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            color: #888;
+        }
+
+        .task-description-btn {
+
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 22px;
+            color: #888;
+        }
+
+        .task-description-btn:hover {
+            color: #744caf;
+        }
+
+        .delete-btn:hover {
+            color: #ff3333;
+        }
+
+        .plus-button {
+            font-size: 15px;
+            margin-top: 10px;
+            padding: 6px 12px;
+            background-color: #744caf;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .plus-button:hover {
+            background-color: rgb(8, 105, 8);
+        }
+
+        .task-input {
+            border: none;
+            outline: none;
+            background-color: transparent;
+            width: 100%;
+            font-size: 17px;
+        }
+
+        .task-text {
+            letter-spacing: 0.02rem;
+            font-size: 18px;
+            overflow-wrap: break-word;
+        }
+
+        .description-text {
+            border: none;
+            outline: none;
+            background-color: transparent;
+            /* letter-spacing: 1px; */
+            width: 100%;
+            font-size: 17px;
+        }
+
+        .description-text:hover {
+            background-color: #e0e0e0;
+        }
+
+        .task-description {
+            width: 100%;
+        }
+
+        .dropdown-container {
+            position: relative;
+            /* Set the container to relative positioning */
+        }
+
+        .dropdown-button::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 2px;
+            background-color: #744caf;
+            position: absolute;
+            /* Position the underline relative to the container */
+            bottom: 0;
+            left: 0;
+            transition: width 0.3s ease-in-out;
+        }
+
+        .dropdown-button:hover {
+            color: #744caf;
+        }
+
+        .dropdown-button:hover::after {
+            width: 20%;
+
+        }
+
+        .progress-bar {
+
+            width: 100%;
+            background-color: transparent;
+            height: 10px;
+            border: solid 1px rgb(180, 180, 180);
+            border-radius: 5px;
+            transition: width 0.3s ease-in-out;
+            box-shadow: 0 0 5px rgba(116, 76, 175, 0.8);
+        }
+
+        .progress {
+            width: 0;
+            height: 100%;
+            /* background-color: teal; */
+            background: linear-gradient(to right, #744caf, #943df7);
+            border-radius: 10px;
+            transition: width 0.3s ease-in-out;
+            /* Add animation to the progress */
+        }
+
+        /* Animation for glowing effect */
+        @keyframes glowing {
+            0% {
+                box-shadow: 0 0 15px rgba(116, 76, 175, 0.8);
+            }
+
+            50% {
+                box-shadow: 0 0 30px rgba(116, 76, 175, 0.8);
+            }
+
+            100% {
+                box-shadow: 0 0 15px rgba(116, 76, 175, 0.8);
+            }
+        }
+
+        .glow-animation {
+
+            animation: glowing 1.7s infinite cubic-bezier(0.25, 0.1, 0.25, 1.5);
+            /* You can adjust the animation duration here */
+        }
+
+
+
+        .goal-button-container {
+            align-items: center;
+        }
+
+        .delete-card-button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            color: #888;
+
+            margin-left: 10px;
+
+        }
+
+        .edit-card-button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            color: #888;
+
+        }
+
+        .delete-card-button:hover {
+            color: #ff3333;
+
+        }
+
+        .edit-card-button:hover {
+            color: #744caf;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="fade-in">
+            <div class="add-goal-container">
+                <button id="addGoalButton" class="add-goal-button">Add a new Goal</button>
+            </div>
+        </div>
+        <div class="slide-bottom">
+            <div class="container" id="goalContainer">
+                <!-- Goal cards will be added here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
