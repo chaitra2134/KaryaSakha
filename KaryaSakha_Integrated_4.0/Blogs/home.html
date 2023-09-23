@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blogs</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,400;10..48,500&family=Poppins:ital,wght@0,500;0,600;1,400;1,500&family=Roboto:ital,wght@0,300;1,700&display=swap');
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+         
+        .hero{
+          font-size: 18px;
+          padding: 10px;
+          
+        }
+        
+        .cta{
+
+          text-align: center;
+            width: 70%;
+            font-size: 16px;
+          
+        }
+
+        h2{
+          padding: 5px;
+        }
+       
+        /* Style the card container */
+
+
+.card-section {
+  height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Style the card container */
+.card-container {
+  padding-top: 100px;
+  padding-left: 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  grid-gap: 10px; 
+  width: 100%; 
+  margin: 0 auto;
+  overflow-y: auto; 
+  height: 100vh; 
+  padding: 20px;
+  background-color: rgb(255, 255, 255); 
+  align-items: center;
+  justify-content: center;
+  
+ 
+}
+
+/* Style individual cards */
+.card {
+  border: 1px solid #ddd;
+  overflow: hidden;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 20px;
+  width: 400px;
+  height: 340px; 
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+.card h2 {
+  font-size: 16px;
+ 
+
+}
+
+.card img {
+  max-width: 100%;
+  height: 270px;
+
+}
+
+
+.card.card-show {
+
+            opacity: 1;
+        }
+
+
+        
+.container {
+  /* margin-top: 100px;
+  margin-left: 100px; */
+  padding-top: 100px;
+  padding-left: 100px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container .card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  width: 65%;
+ 
+}
+
+.container .cat-card {
+  border: 1px solid #ddd;
+  text-align: center;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+.cat-card:hover {
+   
+    transform: scale(1.05);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: #f0f0f0; 
+}
+
+
+.container .cat-card img {
+  max-width: 100%;
+  height: auto; 
+  display: block; 
+ 
+}
+
+.container .cat-card h1 {
+  font-size: 18px;
+  padding: 10px; 
+  margin: 0;
+}      
+.card h2 {
+  font-size: 16px;
+  padding: 5px; 
+  margin: 0;
+}     
+    </style>
+</head>
+<body>
+    <div class="container">
+     
+         <h2 class="cta">Explore Our Blog for Expert Insights, Practical Tips, and Inspirational <br>Stories to Transform Your Work and Life. </h2>
+        <div class="card-grid">
+            <div class="cat-card" data-category="productivity tips">
+              <img src="https://images.unsplash.com/photo-1613926161474-fcc7a939e051?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8UGVyc29uYWwlMjBHcm93dGh8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="Personal Growth">
+                   <h1>productivity tips</h1>
+            </div>
+            <div class="cat-card" data-category="Remote Work">
+                <img src="https://images.unsplash.com/photo-1621570273800-1b50b0173a97?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDZ8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60" alt="Personal Growth">
+                    <h1>Remote Work</h1>
+            </div>
+            <div class="cat-card" data-category="Personal Growth">
+                <img src="https://images.unsplash.com/photo-1514474959185-1472d4c4e0d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8UHJvZHVjdGl2aXR5fGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="Personal Growth">
+                   <h1>Personal Growth</h1>
+            </div>
+            <div class="cat-card" data-category="Communication">
+                <img src="https://images.unsplash.com/photo-1543269865-4430f94492b9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Personal Growth">
+                  <h1>Communication</h1>
+            </div>
+            <div class="cat-card" data-category="Miscellaneous">
+                <img src="https://img.freepik.com/free-photo/female-artist-folding-origami-paper-making-beautiful-craft_23-2148188409.jpg?size=626&ext=jpg">
+                   <h1>Miscellaneous</h1>
+            </div>
+            <div class="cat-card" data-category="Environmental awareness">
+                <img src="https://img.freepik.com/free-vector/realistic-world-environment-day-with-hands-holding-plant_23-2148522584.jpg?size=626&ext=jpg">
+                      <h1>Environmental awareness</h1>
+            </div>
+          </div>
+
+    </div>
+    <div class="card-container" id="card-container">
+    
+    </div>
+    
+</body>
+<script>
+  const categories = document.querySelectorAll('.cat-card');
+  const cardContainer = document.getElementById('card-container');
+  let blogData = []; 
+
+  
+  fetch('blog-data.json')
+    .then((response) => response.json())
+    .then((data) => {
+      blogData = [...data];
+    })
+    .catch((error) => {
+      console.error('Error loading blog data:', error);
+    });
+
+  categories.forEach((category) => {
+    category.addEventListener('click', () => {
+      const categoryName = category.getAttribute('data-category');
+      displayBlogCards(categoryName);
+    });
+  });
+
+  function displayBlogCards(categoryName) {
+    
+    const categoryCards = blogData
+      .filter((blog) => blog.category === categoryName)
+      .map((blog) => createBlogCard(blog));
+
+    
+    cardContainer.innerHTML = '';
+
+    
+    categoryCards.forEach((card, index) => {
+      setTimeout(() => {
+        card.classList.add('card-show');
+      }, index * 200);
+      cardContainer.appendChild(card);
+    });
+    cardContainer.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  function createBlogCard(blog) {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.innerHTML = `
+      <a href="${blog.url}" target="_blank">
+        <img src="${blog.img}" alt="${blog.title}">
+        <h2>${blog.title}</h2>
+      </a>
+    `;
+
+    return card;
+  }
+</script>
+
+
+
+
+
+</html>
