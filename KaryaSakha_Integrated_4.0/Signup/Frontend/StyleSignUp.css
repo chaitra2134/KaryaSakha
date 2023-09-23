@@ -1,0 +1,201 @@
+/*
+    Author - Om and Neha
+    Date and time unknown
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&family=Roboto:ital,wght@0,300;1,700&display=swap');
+
+html, body, .split-left, .split-right {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  
+  .split-container {
+    display: flex;
+  }
+  
+ 
+  
+  .split-left {
+    flex: 1;
+    height: 100vh; 
+    background-color: #ffffff; 
+    
+  }
+  
+  
+  .split-right {
+    flex: 1;
+    background-color: #d3d3d3; 
+  }
+  
+  
+  
+  .centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+  }
+
+  img{
+    width: 60%;
+    overflow: hidden;
+    margin-top: 20%;
+    margin-left: 14%;
+  }
+  
+  
+
+  .centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    background-color: #ffffff; 
+  }
+  
+  
+  h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+ 
+  form {
+    max-width: 400px;
+    width: 100%; 
+   padding: 25px 25px 25px 25px;
+   border: 1px solid rgb(0, 0, 0);
+   
+    
+  }
+  
+ 
+  label {
+    display: block;
+    margin-bottom: 5px;
+   font-weight: normal; 
+   letter-spacing: 0.05rem;
+    }
+   
+  input {
+    width: 350px;
+
+    padding: 14px 16px; 
+    border: 1px solid #000000;
+    border-radius: 4px;
+    margin-bottom: 1px;
+  }
+  
+  
+   input[type="submit"] {
+    
+    color: #000000;
+    padding: 14px 16px;
+    width:385px;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    
+  
+  } 
+  
+  
+
+  
+  
+   form {
+    border: 1px solid rgb(255, 255, 255);
+   }
+  form .field {
+    margin-bottom: 40px;
+    
+  }
+  form .input-field {
+    position: relative;
+    height: 55px;
+    width: 100%;
+  }
+  .input-field input {
+
+    display: flex;
+    width: 350x;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    padding: 14 16px;
+    border: 1px solid #d1d1d1;
+  }
+  .invalid input {
+    border-color: #d93025;
+  }
+  .input-field .show-hide {
+    position: absolute;
+    right: 13px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #919191;
+    cursor: pointer;
+    padding: 3px;
+  }
+  .field .error {
+    display: flex;
+    align-items: center;
+    margin-top: 6px;
+    color: #d93025;
+    font-size: 13px;
+    display: none;
+  }
+  .invalid .error {
+    display: flex;
+  }
+  .error .error-icon {
+    margin-right: 6px;
+    font-size: 15px;
+  }
+  .create-password .error {
+    align-items: flex-start;
+  }
+  .create-password .error-icon {
+    margin-top: 4px;
+  }
+  .button {
+    margin: 35px 0 6px;
+  }
+  .button input {
+    color: white;
+    font-size: 16px;
+    font-weight: 200;
+    background-color: rgb(79, 179, 147);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .button input:hover {
+    background-color: rgb(25, 131, 97);
+  }
+
+  .head-text{
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.03rem;
+  }
+  label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    
+  }
+  header{
+    font-size: 24px;
+  }
+
+  footer{
+    margin-left: 20%;
+  }

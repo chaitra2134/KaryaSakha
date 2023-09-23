@@ -1,0 +1,592 @@
+<!-- Author :- Pranav Golande aka bytemaster69 -->
+<!-- Date :- August 4 2023 -->
+<!-- Time:- 5:48 -->
+<!-- TO DO LIST -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <title>To-Do List</title>
+  <style>
+    /*-- Author :- Ritu Maity  -->
+<!-- Date :- August 10 2023 -->
+<!-- Time:- 12:50pm -->
+<!-- TO DO LIST -->*/
+    body {
+        padding-top: 40px;
+        padding-left: 200px; 
+              font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    /* .centered-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+    .upper-section,
+    .lower-section {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .centered-container {
+      /*width: 50%;
+  max-width: 600px;
+  height: 50%;*/
+      flex: 1;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+      padding: 90px;
+    }
+
+    .input-container input[type="text"] {
+      width: 100%;
+      padding: 4px;
+      border: none;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      font-size: 14px;
+    }
+
+    .section {
+      flex: 1;
+      
+      padding: 40px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      letter-spacing: normal;
+      /* background-color:rgba(255, 99, 71, 0.2); */
+      background-color: #FFCCCC;
+
+    }
+
+    .section11 {
+      flex: 1;
+      padding: 40px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      letter-spacing: normal;
+      background-color: rgb(255, 204, 153);
+
+    }
+
+    .section22 {
+      flex: 1;
+      padding: 40px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      letter-spacing: normal;
+      background-color: rgb(255, 255, 153);
+
+    }
+
+    .section33 {
+      flex: 1;
+      padding: 40px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      letter-spacing: normal;
+      background-color: rgb(153, 255, 153);
+
+    }
+
+    .color1 {
+      background-color: tomato;
+    }
+
+    .section h2 {
+      margin-top: 0;
+      font-size: 1.5rem;
+      color: #333;
+    }
+
+    .tasks {
+      list-style: none;
+      padding: 0px;
+    }
+
+    .tasks li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px;
+      background-color: #f9f9f9;
+      border-radius: 5px;
+      overflow-wrap: break-word;
+      /* Change this line */
+    }
+
+    .tasks li .actions {
+      display: flex;
+      gap: 5px;
+    }
+
+    .checkbox {
+      margin-right: 10px;
+
+    }
+
+    .delete-btn,
+    .star-btn {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      color: #888;
+    }
+
+    .delete-btn:hover {
+      color: #ff3333;
+    }
+
+    /* .star-btn:hover {
+  color: #f1c40f;
+} */
+
+    .add-btn {
+      margin-top: 10px;
+      padding: 8px 16px;
+      background-color: #744caf;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .add-btn:hover {
+      background-color: #b80808;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="centered-container">
+    <div class="upper-section">
+      <div class="section">
+        <h2>Important & Urgent</h2>
+        <ul class="tasks" id="section1"></ul>
+        <div class="add-btn-container">
+          <button class="add-btn" onclick="showInput('section1',1,false,false)">
+            +
+          </button>
+        </div>
+
+      </div>
+      <div class="section11">
+        <h2>Important but not Urgent</h2>
+        <ul class="tasks" id="section2"></ul>
+        <div class="add-btn-container">
+          <button class="add-btn" onclick="showInput('section2',2,false,false)">
+            +
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="lower-section">
+      <div class="section22">
+        <h2>Not Important but Urgent</h2>
+        <ul class="tasks" id="section3"></ul>
+        <div class="add-btn-container">
+          <button class="add-btn" onclick="showInput('section3',3,false,false)">
+            +
+          </button>
+        </div>
+      </div>
+      <div class="section33">
+        <h2>Not Important & not Urgent</h2>
+        <ul class="tasks" id="section4"></ul>
+        <div class="add-btn-container">
+          <button class="add-btn" onclick="showInput('section4',4,false,false)">
+            +
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <script>
+//   function showInput(sectionId, taskQuadrant, isCompleted, isStarred) {
+//     const section = document.getElementById(sectionId);
+
+//     const inputContainer = document.createElement("li");
+//     inputContainer.className = "input-container";
+
+//     const input = document.createElement("input");
+//     input.type = "text";
+//     input.placeholder = "Enter a task";
+//     input.addEventListener("keydown", function (event) {
+//         if (event.key === "Enter") {
+//             addTask(sectionId, input.value, taskQuadrant, isCompleted, isStarred);
+//             section.removeChild(inputContainer);
+//             list.style.display = "block";
+//         }
+//     });
+
+//     const checkbox = document.createElement("input");
+//     checkbox.type = "checkbox";
+//     checkbox.style.visibility = "hidden";
+
+//     inputContainer.appendChild(checkbox);
+//     inputContainer.appendChild(input);
+//     section.appendChild(inputContainer);
+//     input.focus();
+//     list.style.display = "none";
+// }
+
+// function addTask(sectionId, taskText, taskQuadrant, isCompleted, isStarred) {
+//     const section = document.getElementById(sectionId);
+
+//     if (taskText) {
+//         const li = document.createElement("li");
+//         const checkbox = document.createElement("input");
+//         checkbox.type = "checkbox";
+//         checkbox.className = "checkbox";
+//         checkbox.onchange = function () {
+//             const newIsCompleted = checkbox.checked;
+
+//             if (newIsCompleted) {
+//                 li.style.textDecoration = "line-through";
+//                 li.style.color = "grey";
+//             } else {
+//                 li.style.textDecoration = "none";
+//                 li.style.color = "black";
+//             }
+
+//             const formData = new FormData();
+//             formData.append('taskText', taskText);
+//             formData.append('taskQuadrant', taskQuadrant);
+//             formData.append('isCompleted', newIsCompleted);
+
+//             fetch('update_task_status.php', {
+//                 method: 'POST',
+//                 body: formData
+//             })
+//             .then(response => response.text())
+//             .then(data => {
+//                 console.log(data);
+//             })
+//             .catch(error => console.error('Error:', error));
+//         };
+
+//         checkbox.checked = isCompleted ==='true';
+//         if (isCompleted==='true') {
+//             li.style.textDecoration = "line-through";
+//             li.style.color = "grey";
+//         }
+
+//         const formData = new FormData();
+//         formData.append('taskText', taskText);
+//         formData.append('taskQuadrant', taskQuadrant);
+//         formData.append('isCompleted', isCompleted);
+
+//         fetch('insert_task.php', {
+//             method: 'POST',
+//             body: formData
+//         })
+//         .then(response => response.text())
+//         .then(data => console.log(data))
+//         .catch(error => console.error('Error:', error));
+
+//         const actionsContainer = document.createElement("div");
+//         actionsContainer.className = "actions";
+
+//         const deleteBtn = document.createElement("button");
+//         deleteBtn.innerHTML = '<i class="fas fa-trash-alt"></i>';
+//         deleteBtn.className = "delete-btn";
+//         deleteBtn.onclick = function () {
+//             const taskText = li.getAttribute('data-task-text');
+//             const taskQuadrant = li.getAttribute('data-task-quadrant');
+
+//             section.removeChild(li);
+
+//             const formData = new FormData();
+//             formData.append('taskText', taskText);
+//             formData.append('taskQuadrant', taskQuadrant);
+
+//             fetch('delete_task.php', {
+//                 method: 'POST',
+//                 body: formData
+//             })
+//             .then(response => response.text())
+//             .then(data => {
+//                 console.log(data);
+//             })
+//             .catch(error => console.error('Error:', error));
+//         };
+
+//         li.setAttribute('data-task-text', taskText);
+//         li.setAttribute('data-task-quadrant', taskQuadrant);
+
+//         const starBtn = document.createElement("button");
+//         starBtn.innerHTML = '<i class="fas fa-star"></i>';
+//         starBtn.className = "star-btn";
+//         starBtn.onclick = function () {
+//             const taskText = li.getAttribute('data-task-text');
+//             const taskQuadrant = li.getAttribute('data-task-quadrant');
+//             let isStarred = li.getAttribute('data-is-starred') === 'true';
+
+//             if (isStarred) {
+//                 starBtn.style.color = "";
+//                 isStarred = false;
+//             } else {
+//                 starBtn.style.color = "#f1c40f";
+//                 isStarred = true;
+//             }
+//             li.setAttribute('data-is-starred', isStarred ? 'true' : 'false');
+//             section.removeChild(li);
+//             section.prepend(li);
+//             const formData = new FormData();
+//             formData.append('taskText', taskText);
+//             formData.append('taskQuadrant', taskQuadrant);
+//             formData.append('isStarred', isStarred ? 'true' : 'false');
+
+//             fetch('update_star_status.php', {
+//                 method: 'POST',
+//                 body: formData
+//             })
+//             .then(response => response.text())
+//             .then(data => {
+//                 console.log(data);
+//             })
+//             .catch(error => console.error('Error:', error));
+//         };
+
+//         actionsContainer.appendChild(deleteBtn);
+//         actionsContainer.appendChild(starBtn);
+
+//         li.appendChild(checkbox);
+//         li.appendChild(document.createTextNode(` ${taskText}`));
+//         li.appendChild(actionsContainer);
+//         li.setAttribute('data-is-starred', isStarred ? 'true' : 'false');
+//         section.appendChild(li);
+//     }
+// }
+
+// function addTask1(sectionId, taskText, taskQuadrant, isCompleted, isStarred) {
+//     const section = document.getElementById(sectionId);
+
+//     if (taskText) {
+//         const li = document.createElement("li");
+//         const checkbox = document.createElement("input");
+//         checkbox.type = "checkbox";
+//         checkbox.className = "checkbox";
+//         checkbox.onchange = function () {
+//             const newIsCompleted = checkbox.checked;
+
+//             if (newIsCompleted) {
+//                 li.style.textDecoration = "line-through";
+//                 li.style.color = "grey";
+//             } else {
+//                 li.style.textDecoration = "none";
+//                 li.style.color = "black";
+//             }
+
+//             const formData = new FormData();
+//             formData.append('taskText', taskText);
+//             formData.append('taskQuadrant', taskQuadrant);
+//             formData.append('isCompleted', newIsCompleted);
+
+//             fetch('update_task_status.php', {
+//                 method: 'POST',
+//                 body: formData
+//             })
+//             .then(response => response.text())
+//             .then(data => {
+//                 console.log(data);
+//             })
+//             .catch(error => console.error('Error:', error));
+//         };
+
+//         checkbox.checked = isCompleted ==='true';
+//         if (isCompleted==='true') {
+//             li.style.textDecoration = "line-through";
+//             li.style.color = "grey";
+//         }
+
+//         const actionsContainer = document.createElement("div");
+//         actionsContainer.className = "actions";
+
+//         const deleteBtn = document.createElement("button");
+//         deleteBtn.innerHTML = '<i class="fas fa-trash-alt"></i>';
+//         deleteBtn.className = "delete-btn";
+//         deleteBtn.onclick = function () {
+//             const taskText = li.getAttribute('data-task-text');
+//             const taskQuadrant = li.getAttribute('data-task-quadrant');
+
+//             section.removeChild(li);
+
+//             const formData = new FormData();
+//             formData.append('taskText', taskText);
+//             formData.append('taskQuadrant', taskQuadrant);
+
+//             fetch('delete_task.php', {
+//                 method: 'POST',
+//                 body: formData
+//             })
+//             .then(response => response.text())
+//             .then(data => {
+//                 console.log(data);
+//             })
+//             .catch(error => console.error('Error:', error));
+//         };
+
+//         li.setAttribute('data-task-text', taskText);
+//         li.setAttribute('data-task-quadrant', taskQuadrant);
+
+//         const starBtn = document.createElement("button");
+//         starBtn.innerHTML = '<i class="fas fa-star"></i>';
+//         starBtn.className = "star-btn";
+//         if(isStarred==='true')
+//         {
+//             starBtn.style.color = "#f1c40f";
+//         }
+//         starBtn.onclick = function () {
+//             const taskText = li.getAttribute('data-task-text');
+//             const taskQuadrant = li.getAttribute('data-task-quadrant');
+//             let isStarred = li.getAttribute('data-is-starred') === 'true';
+
+//             if (isStarred) {
+//                 starBtn.style.color = "";
+//                 isStarred = false;
+//             } else {
+//                 starBtn.style.color = "#f1c40f";
+//                 isStarred = true;
+//             }
+//             li.setAttribute('data-is-starred', isStarred ? 'true' : 'false');
+//             section.removeChild(li);
+//             section.prepend(li);
+//             const formData = new FormData();
+//             formData.append('taskText', taskText);
+//             formData.append('taskQuadrant', taskQuadrant);
+//             formData.append('isStarred', isStarred ? 'true' : 'false');
+
+//             fetch('update_star_status.php', {
+//                 method: 'POST',
+//                 body: formData
+//             })
+//             .then(response => response.text())
+//             .then(data => {
+//                 console.log(data);
+//             })
+//             .catch(error => console.error('Error:', error));
+//         };
+
+//         actionsContainer.appendChild(deleteBtn);
+//         actionsContainer.appendChild(starBtn);
+
+//         li.appendChild(checkbox);
+//         li.appendChild(document.createTextNode(` ${taskText}`));
+//         li.appendChild(actionsContainer);
+//         li.setAttribute('data-is-starred', isStarred ? 'true' : 'false');
+//         section.appendChild(li);
+//     }
+// }
+
+// function displayTasks() {
+//     const sections = {
+//         1: document.getElementById('section1'),
+//         2: document.getElementById('section2'),
+//         3: document.getElementById('section3'),
+//         4: document.getElementById('section4')
+//     };
+
+//     // Clear existing tasks from all sections
+//     Object.values(sections).forEach(section => {
+//         section.innerHTML = ''; // Remove all child elements
+//     });
+
+//     // Fetch and add tasks to sections
+//     fetch('fetch_tasks1.php')
+//         .then(response => response.json())
+//         .then(tasks => {
+//             tasks.forEach(task => {
+//                 const sectionId = `section${task.taskQuadrant}`;
+//                 const section = sections[task.taskQuadrant];
+
+//                 if (section) {
+//                     addTask1(
+//                         sectionId,
+//                         task.taskContent,
+//                         task.taskQuadrant,
+//                         task.isCompleted,
+//                         task.isStarred
+//                     );
+//                 }
+//             });
+//         })
+//         .catch(error => console.error('Error fetching tasks:', error));
+// }
+
+
+
+
+// window.addEventListener('load', displayTasks);
+
+// window.addEventListener('mousedown', function (event) {
+//     const inputContainers = document.querySelectorAll('.input-container');
+//     inputContainers.forEach(function (container) {
+//         if (!container.contains(event.target)) {
+//             container.remove();
+//         }
+//     });
+// });
+
+
+//     function displayTasks(userId) {
+//       console.log("User ID:", userId);
+//     const quadrants = ['section1', 'section2', 'section3', 'section4'];
+
+//     quadrants.forEach((quadrant, index) => {
+//         fetch(`fetch_tasks.php?userId=${userId}`)
+//             .then(response => response.json())
+//             .then(tasks => {
+//                 const section = document.getElementById(quadrant);
+//                 section.innerHTML = ""; // Clear existing tasks
+//                 console.log("User :", userId);
+
+//                 tasks.filter(task => task.taskQuadrant === index + 1).forEach(task => {
+//                     addTask(quadrant, task.taskText, task.taskQuadrant);
+//                     // You might need to adjust other properties like isCompleted and isStarred
+//                 });
+//             })
+//             .catch(error => console.error('Error fetching tasks:', error));
+//             console.log(":", userId);
+//     });
+// }
+
+// function getUserIdFromSession() {
+  
+//         return '24';
+//     }
+
+//     document.addEventListener('DOMContentLoaded', () => {
+//         const userId = getUserIdFromSession();
+//         displayTasks(userId);
+//     });
+  </script>
+  <script src="new.js"></script>
+</body>
+
+</html>

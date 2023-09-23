@@ -1,0 +1,192 @@
+/*
+    Author - Om and Pranav
+    Date and time unknown
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&family=Roboto:ital,wght@0,300;1,700&display=swap');
+
+html,
+body,
+.split-left,
+.split-right {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.split-container {
+  display: flex;
+}
+
+
+
+.split-left {
+  flex: 1;
+  height: 100vh;
+  background-color: #ffffff;
+
+}
+
+
+.split-right {
+  flex: 1;
+  background-color: #d3d3d3;
+}
+
+
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+img {
+  width: 60%;
+  overflow: hidden;
+  margin-top: 20%;
+  margin-left: 14%;
+}
+
+
+
+.centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #ffffff;
+}
+
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+
+form {
+  max-width: 400px;
+  width: 100%;
+  padding: 20px 70px 20px 70px;
+  border: 1px solid rgb(0, 0, 0);
+
+
+}
+
+form {
+  border-radius: 6px;
+  width: 350px;
+  height: 300px;
+}
+
+form .input-field {
+  flex-direction: row;
+  column-gap: 10px;
+
+
+}
+
+.input-field input {
+
+  height: 45px;
+  width: 42px;
+  border-radius: 10px;
+  outline: none;
+  font-size: 30px;
+  text-align: center;
+  border: 2px solid #949393;
+}
+
+/* .input-field input:focus {
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  } */
+/* .input-field input::-webkit-inner-spin-button,
+  .input-field input::-webkit-outer-spin-button {
+    display: none;
+  }  */
+
+input[type="submit"] {
+
+  color: #000000;
+  padding: 10px 12px;
+  width: 100px;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 10px;
+
+
+}
+
+.button {
+
+  margin: 35px 0 6px;
+}
+
+.button input {
+  color: white;
+  font-size: 20px;
+  font-weight: 200;
+  letter-spacing: 0.05rem;
+  background-color: rgb(79, 179, 147);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button input:hover {
+  background-color: rgb(25, 131, 97);
+}
+
+
+:where(.container, form, .input-field, header) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h4 {
+  /* position: absolute;
+    top: 29%; */
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+
+}
+
+header {
+  /* position:absolute;
+    top: 25%; */
+  position: relative;
+  font-size: 30px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.otp-input {
+  border: none;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  font-size: 42px;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  max-width: 70px;
+  height: 70px;
+  border-radius: 4px;
+  outline: 2px solid rgb(66, 66, 66);
+}
+
+.otp-input:focus-visible {
+  outline: 1px solid rgb(0, 0, 0);
+}
+
+.otp-input.filled {
+  outline: 1px solid rgb(0, 0, 0);
+}
